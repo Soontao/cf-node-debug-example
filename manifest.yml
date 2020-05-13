@@ -1,0 +1,7 @@
+---
+applications:
+- name: cf-node-debug-example
+  memory: 100MB
+  random-route: true
+  disk_quota: 500MB
+  command: node --inspect=39999 lib/index # debugger on 39999
