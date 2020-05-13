@@ -27,8 +27,8 @@ this project is integrated with typescript so maybe it will be little complex th
     * and, application server will not stop when debugger dis-connected from it.
     * in another words, developers could connect & dis-connect to the debugger server again & again.
 * create tunnel between cloud foundry and your host by `cf ssh APP_NAME -L LOCAL_PORT:REMOTE_HOST:REMOTE_PORT`, and `ssh -L` is a ssh option, just ref the ssh document.
-    * the command `cf ssh -L 9999:127.0.0.1:39999`, means the remote nodejs application debugger server `39999` port will be mapped to YOUR host `9999` port.
-    * the `APP_NAME` is defined in the `manifest.yml` file.
+    * e.g. the command `cf ssh APP_NAME -L 9999:127.0.0.1:39999`, will map the remote nodejs application debugger port `39999` to YOUR host `9999` port.
+    * the `APP_NAME` is defined in the `manifest.yml` file by yourself (or application owner).
     * the `REMOTE_HOST` must be set as `127.0.0.1` because you just want to access the host which running the nodejs app (instead of others, its defined by `ssh`).
 * the vscode launch configuration `remote-debug`
     * `configurations[name=remote-debug].port` means the local debugger port, if you use another port in `cf ssh tunnel`, change this.
