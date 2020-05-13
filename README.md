@@ -29,7 +29,7 @@ s
 * create tunnel between cloud foundry and your host by `cf ssh APP_NAME -L LOCAL_PORT:REMOTE_HOST:REMOTE_PORT`, and `ssh -L` is a ssh option, just ref the ssh document.
     * the command `cf ssh -L 9999:127.0.0.1:39999`, means the remote nodejs application debugger server `39999` port will be mapped to YOUR host `9999` port.
     * the `APP_NAME` is defined in the `manifest.yml` file.
-    * the `REMOTE_HOST` must be set as `127.0.0.1` because you just want to access the host running nodejs app (instead of others, its defined by `ssh`).
+    * the `REMOTE_HOST` must be set as `127.0.0.1` because you just want to access the host which running the nodejs app (instead of others, its defined by `ssh`).
 * the vscode launch configuration `remote-debug`
     * `configurations[name=remote-debug].port` means the local debugger port, if you use another port in `cf ssh tunnel`, change this.
     * `configurations[name=remote-debug].remoteRoot` means the remote source code base directory, for cloud foundry, please always set it as `/home/vcap/app` is fine, this configuration will make your `vscode` & `sourcemap` will work.
