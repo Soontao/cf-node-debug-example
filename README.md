@@ -4,7 +4,7 @@
 
 this project is integrated with typescript so maybe it will be little complex than other pure native nodejs application.
 
-![](https://res.cloudinary.com/digf90pwi/image/upload/v1589340692/cf-node-debug-example_1_eyteqg.png)
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1589340841/cf-node-debug-example_2_c6dnzi.png)
 
 ## Setup
 
