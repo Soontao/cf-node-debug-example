@@ -37,7 +37,7 @@ s
     * remember to add `39999` as debugger connection, or map remote `39999` port to a default port (`9222`/`9229`).
 * application with load balancer (multi instances)
     * ref this [doc](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html#ssh-common-flags), specify the instance index.
-    * but, you know, generally, you don't know which instance you should to debug, its a complex topic, you need other tools.
+    * but, you know, generally, you don't know which instance should to be debug, its a complex topic, and you need other tools.
 
 ## Screenshots
 
