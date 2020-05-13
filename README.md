@@ -2,19 +2,21 @@
 
 ![Node CI](https://github.com/Soontao/cf-node-debug-example/workflows/Node%20CI/badge.svg)
 
-typescript express project with sourcemap
+typescript express project with sourcemap.
+
+this project is integrated with typescript so maybe it will be little complex than other pure native nodejs application.
 
 ## Setup
 
 * `cf` cli must has logged in before.
-* git clone this project
+* `git clone` this project
 
 ## Steps
 
 1. (optional) write your own business logic
 1. `npm build` to build native nodejs code
 1. `cf push` to deploy application
-1. after deploy successful, run `cf ssh cf-node-debug-example  -N -L 39999:127.0.0.1:39999`, or vscode task `connect-ssh-tunnel`, this command will block your shell.
+1. after the application deployed successful, just run the `cf ssh cf-node-debug-example  -N -L 39999:127.0.0.1:39999` command, or vscode task `connect-ssh-tunnel`, this command will block your shell without any output (if successful).
 1. use vscode predefined `remote-debug` profile start your debug, OR use the `chrome://inspect` tool to debug.
 
 ## Key Points
@@ -25,8 +27,8 @@ typescript express project with sourcemap
     * and, application server will not stop when debugger dis-connected from it.
     * in another words, developers could connect & dis-connect to the debugger server again & again.
 * create tunnel between cloud foundry and your host by `cf ssh -L LOCAL_PORT:REMOTE_HOST:REMOTE_PORT`, and `ssh -L` is a ssh option, just ref the ssh document.
-    * `cf ssh -L 9999:127.0.0.1:39999`, means the remote nodejs process debugger server will be mapped to localhost:9999
-    * the `REMOTE_HOST` must be set as `127.0.0.1` because you just want to access the host running nodejs app (instead of others)
+    * the command `cf ssh -L 9999:127.0.0.1:39999`, means the remote nodejs application debugger server `39999` port will be mapped to YOUR host `9999` port.
+    * the `REMOTE_HOST` must be set as `127.0.0.1` because you just want to access the host running nodejs app (instead of others, its defined by `ssh`).
 * the vscode launch configuration `remote-debug`
     * `configurations[name=remote-debug].port` means the local debugger port, if you use another port in `cf ssh tunnel`, change this.
     * `configurations[name=remote-debug].remoteRoot` means the remote source code base directory, for cloud foundry, please always set it as `/home/vcap/app` is fine, this configuration will make your `vscode` & `sourcemap` will work.
