@@ -33,7 +33,7 @@
     "husky": "^4.3.0",
     "jest": "^25",
     "standard-version": "^8",
-    "ts-jest": "^25.5.1",
+    "ts-jest": "^26.4.1",
     "ts-node": "^9.0.0",
     "typescript": "^3.9.7"
   },
