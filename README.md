@@ -16,7 +16,9 @@ this project is integrated with typescript so maybe it will be little complex th
 1. (optional) write your own business logic
 1. `npm build` to build native nodejs code
 1. `cf push` to deploy application
-1. after the application deployed successful, just run the `cf ssh cf-node-debug-example -N -L 39999:127.0.0.1:39999` command, or vscode task `connect-ssh-tunnel`, this command will BLOCK your shell without any output (if successful).
+1. `cf enable-ssh <appName>`
+1. `cf restart <appName>`
+1. after the application deployed successful, just run the `cf ssh <appName> -N -L 39999:127.0.0.1:39999` command, or vscode task `connect-ssh-tunnel`, this command will BLOCK your shell without any output (if successful).
 1. use vscode predefined `remote-debug` profile start your debug. (OR, use the `chrome://inspect` tool to debug.)
 
 ## Key Points
