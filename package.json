@@ -35,7 +35,7 @@
     "standard-version": "^9.1.1",
     "ts-jest": "^26.5.4",
     "ts-node": "^9.1.1",
-    "typescript": "^4.2.3"
+    "typescript": "^4.3.2"
   },
   "jest": {
     "testTimeout": 30000,
