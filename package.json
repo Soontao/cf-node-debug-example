@@ -11,22 +11,19 @@
     "coverage": "npm test -- --coverage --no-cache"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.1"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "17.1.0",
     "@types/express": "4.17.14",
     "@types/jest": "29.0.2",
     "@types/node": "16.11.59",
     "@typescript-eslint/eslint-plugin": "5.37.0",
     "@typescript-eslint/parser": "5.37.0",
-    "commitlint": "17.1.2",
     "eslint": "8.23.1",
-    "husky": "8.0.1",
     "jest": "29.0.3",
     "standard-version": "9.5.0",
     "ts-jest": "29.0.1",
@@ -53,10 +50,5 @@
       "js",
       "json"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   }
 }
