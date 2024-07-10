@@ -5,5 +5,5 @@ applications:
     random-route: true
     disk_quota: 500MB
     buildpacks:
-      - https://github.com/cloudfoundry/nodejs-buildpack
+      - https://github.com/cloudfoundry/nodejs-buildpack.git#v1.8.23
     command: node --inspect=39999 lib/index # debugger on 39999
