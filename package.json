@@ -12,7 +12,7 @@
   },
   "engines": {
     "node": "22",
-    "npm": "10"
+    "npm": "11"
   },
   "license": "MIT",
   "dependencies": {
